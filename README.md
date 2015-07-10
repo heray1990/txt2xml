@@ -60,7 +60,6 @@ The contents of `strings.xml` in `values-zh/`:
 
 ```
 <?xml version="1.0" ?>
-<?xml version="1.0" ?>
 <resources>
   <string name="Main.MenuPreferences">配置</string>
   <string name="Main.MenuShowDownloads">下载</string>
