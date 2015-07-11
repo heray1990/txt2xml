@@ -61,9 +61,9 @@ The contents of `strings.xml` in `values-zh/`:
 ```
 <?xml version="1.0" ?>
 <resources>
-  <string name="Main.MenuPreferences">配置</string>
-  <string name="Main.MenuShowDownloads">下载</string>
   <string name="Main.MenuShowHistory">历史</string>
+  <string name="Main.MenuShowDownloads">下载</string>
+  <string name="Main.MenuPreferences">配置</string>
   <string name="PreferencesActivity.EnableJavascriptPreferenceSummary">如果不支持JavaScript，很多网站效果不能打开，建议打开.</string>
 </resources>
 ```
