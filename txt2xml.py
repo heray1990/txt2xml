@@ -10,6 +10,7 @@ import os
 import re
 import codecs
 import shutil
+import collections
 from xml.dom.minidom import Document
 
 XML_FILE_NAME = "strings.xml"
@@ -20,7 +21,7 @@ class unicodetxt_to_android_stringxml_obj:
         self.txtfd = 0
         self.xmlfd = 0
         self.langls = []
-        self.stringdict = {}
+        self.stringdict = collections.OrderedDict()
 
     def parse_txt_file(self, txt_fname):
         cwd = os.path.dirname(sys.argv[0])
@@ -38,7 +39,7 @@ class unicodetxt_to_android_stringxml_obj:
             lskey.append(subls[0])
             lsval.append(subls[1:])
 
-        self.stringdict = dict(zip(lskey,lsval))
+        self.stringdict = collections.OrderedDict(zip(lskey,lsval))
 
     def build_xml_file(self):
         cwd = os.path.dirname(sys.argv[0])
