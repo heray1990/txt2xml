@@ -71,10 +71,10 @@ class unicodetxt_to_android_stringxml_obj:
             text_re = re.compile('>\n\s+([^<>\s].*?)\n\s+</', re.DOTALL)    
             prettyXml = text_re.sub('>\g<1></', uglyXml)
 
-            f = open(os.path.join(XML_FILE_DIR_PREFIX + j,XML_FILE_NAME),'w')
-            #doc.writexml(f)
-            f.write(prettyXml)
-            f.close()
+            self.xmlfd = open(os.path.join(XML_FILE_DIR_PREFIX + j,XML_FILE_NAME),'w')
+            #doc.writexml(self.xmlfd)
+            self.xmlfd.write(prettyXml)
+            self.xmlfd.close()
 
 obj = unicodetxt_to_android_stringxml_obj()
 obj.parse_txt_file(sys.argv[1])
