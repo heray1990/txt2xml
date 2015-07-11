@@ -29,7 +29,7 @@ Let's say we have an Excel table as bellow:
     <td>Downloads</td>
   </tr>
   <tr>
-    <td>Main.MenuShowDownloads</td>
+    <td>Main.MenuPreferences</td>
     <td>配置</td>
     <td>Préférences</td>
     <td>Preferencias</td>
