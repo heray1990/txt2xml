@@ -36,8 +36,6 @@ class unicodetxt_to_android_stringxml_obj:
 
         self.langls = ls[0].split('\t')
         
-        lskey = []
-        lsval = []
         for i in ls[1:]:
             subls = i.split('\t')
             self.stringdict[subls[0]] = subls[1:]
