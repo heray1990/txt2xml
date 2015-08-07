@@ -18,6 +18,10 @@ XML_FILE_DIR_PREFIX = "values-"
 
 class unicodetxt_to_android_stringxml_obj:
     def __init__(self):
+        if len(sys.argv) != 2:
+            print 'usage: ./txt2xml.py file'
+            sys.exit(1)
+
         self.txtfd = 0
         self.xmlfd = 0
         self.langls = []
@@ -36,10 +40,7 @@ class unicodetxt_to_android_stringxml_obj:
         lsval = []
         for i in ls[1:]:
             subls = i.split('\t')
-            lskey.append(subls[0])
-            lsval.append(subls[1:])
-
-        self.stringdict = collections.OrderedDict(zip(lskey,lsval))
+            self.stringdict[subls[0]] = subls[1:]
 
     def build_xml_file(self):
         cwd = os.path.dirname(sys.argv[0])
